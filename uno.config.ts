@@ -7,6 +7,7 @@ import {
   transformerDirectives,
   transformerVariantGroup
 } from 'unocss'
+import extractorMdc from '@unocss/extractor-mdc'
 
 export default defineConfig({
   presets: [
@@ -17,9 +18,13 @@ export default defineConfig({
       provider: 'bunny',
       fonts: {
         display: 'Ubuntu:500,700',
-        body: 'Inter:400,600'
+        body: 'Inter:400,500,600'
       }
     })
   ],
-  transformers: [transformerDirectives(), transformerVariantGroup()]
+  extractors: [extractorMdc()],
+  transformers: [transformerDirectives(), transformerVariantGroup()],
+  content: {
+    filesystem: ['content/**/*.md']
+  }
 })
