@@ -12,6 +12,9 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/content'
   ],
+  image: {
+    provider: 'ipxStatic'
+  },
   content: {
     experimental: {
       search: true
