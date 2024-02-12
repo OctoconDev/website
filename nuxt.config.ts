@@ -12,9 +12,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/content'
   ],
-  image: {
-    provider: 'ipxStatic'
-  },
+  image: {},
   content: {
     experimental: {
       search: true
@@ -32,6 +30,22 @@ export default defineNuxtConfig({
     },
     '/docs/community': {
       redirect: '/docs/community/getting-started'
+    },
+    '/': { prerender: true },
+    '/docs/**': { isr: true }
+  },
+  nitro: {
+    preset: 'netlify',
+    prerender: {
+      routes: [
+        '/',
+        '/_ipx/f_webp&q_90&s_512x512/img/octocon-logo.png',
+        '/_ipx/f_avif&q_90&s_256x256/img/octocon-logo.png',
+        '/_ipx/f_webp&q_90&s_256x256/img/octocon-logo.png',
+        '/_ipx/f_png&q_90&s_256x256/img/octocon-logo.png',
+        '/_ipx/f_png&q_90&s_512x512/img/octocon-logo.png',
+        '/_ipx/f_avif&q_90&s_512x512/img/octocon-logo.png'
+      ]
     }
   },
   future: {
