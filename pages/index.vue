@@ -8,6 +8,6 @@
 useSeoMeta({
   title: 'Home',
   description:
-    'The modern, all-in-one toolkit for people with DID and OSDD to manage their disorder and express themselves.'
+    'The modern Discord bot and mobile app for people with DID and OSDD to manage their disorder and express themselves.'
 })
 </script>
