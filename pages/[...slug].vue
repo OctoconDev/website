@@ -23,7 +23,7 @@
             ? 'opacity-100'
             : 'opacity-0 lg:opacity-100 pointer-events-none lg:pointer-events-auto'
         "
-        class="fixed inset-0 backdrop-blur-md bg-gray-950/75 grid place-items-center lg:block lg:position-unset lg:backdrop-blur-0 lg:bg-transparent transition duration-300 ease-in-out"
+        class="fixed inset-0 overflow-y-scroll backdrop-blur-md bg-gray-950/75 grid place-items-center lg:block lg:position-unset lg:backdrop-blur-0 lg:bg-transparent transition duration-300 ease-in-out"
       >
         <nav class="flex w-[16rem] flex-col gap-4 py-24 sm:py-32 md:py-32">
           <template v-for="child in navigationData.children" :key="child._path">
@@ -33,7 +33,7 @@
         </nav>
       </aside>
       <ContentDoc
-        class="font-body prose prose-invert prose-gray w-80ch! py-24 sm:py-32 md:py-32"
+        class="font-body prose prose-invert prose-gray max-w-auto! w-full lg:w-80ch! py-24 sm:py-32 md:py-32"
       >
         <template #not-found>
           <div
@@ -64,6 +64,14 @@ const { data: _navigationData } = await useAsyncData('navigation', () =>
 )
 
 const navigationData: NavItem = computed(() => _navigationData.value[0])
+
+useHead({
+  htmlAttrs: {
+    class: computed(() =>
+      isNavOpen.value ? 'overflow-hidden lg:overflow-auto' : ''
+    )
+  }
+})
 </script>
 <style>
 .prose h1 {
