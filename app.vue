@@ -10,10 +10,7 @@
 import '@unocss/reset/tailwind.css'
 
 useHead({
-  titleTemplate: '%s - Octocon',
-  htmlAttrs: {
-    lang: 'en'
-  }
+  titleTemplate: '%s - Octocon'
 })
 </script>
 

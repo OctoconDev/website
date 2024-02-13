@@ -10,10 +10,12 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@unocss/nuxt',
     '@vueuse/nuxt',
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/seo'
   ],
   image: {},
   content: {
+    highlight: false,
     experimental: {
       search: true
     }
@@ -34,13 +36,14 @@ export default defineNuxtConfig({
     '/docs/contributing': {
       redirect: '/docs/contributing/getting-started'
     },
-    '/': { prerender: true },
     '/docs/**': { isr: true }
   },
   nitro: {
     prerender: {
       routes: [
         '/',
+        '/sitemap.xml',
+        '/robots.txt',
         '/_ipx/f_webp&q_90&s_512x512/img/octocon-logo.png',
         '/_ipx/f_avif&q_90&s_256x256/img/octocon-logo.png',
         '/_ipx/f_webp&q_90&s_256x256/img/octocon-logo.png',
@@ -52,5 +55,15 @@ export default defineNuxtConfig({
   },
   future: {
     typescriptBundlerResolution: true
+  },
+  site: {
+    url: 'https://octocon.app',
+    name: 'Octocon',
+    description:
+      'The modern, all-in-one toolkit for people with DID and OSDD to manage their disorder and express themselves.',
+    defaultLocale: 'en'
+  },
+  sitemap: {
+    strictNuxtContentPaths: true
   }
 })

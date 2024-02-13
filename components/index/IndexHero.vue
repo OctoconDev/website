@@ -14,6 +14,7 @@
       <div class="relative h-[128px] w-[128px]">
         <NuxtPicture
           src="/img/octocon-logo.png"
+          alt="Octocon logo"
           format="avif,webp"
           width="128"
           height="128"
