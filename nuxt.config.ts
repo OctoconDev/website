@@ -35,7 +35,6 @@ export default defineNuxtConfig({
     '/docs/**': { isr: true }
   },
   nitro: {
-    preset: 'netlify',
     prerender: {
       routes: [
         '/',
