@@ -31,6 +31,9 @@ export default defineNuxtConfig({
     '/docs/community': {
       redirect: '/docs/community/getting-started'
     },
+    '/docs/contributing': {
+      redirect: '/docs/contributing/getting-started'
+    },
     '/': { prerender: true },
     '/docs/**': { isr: true }
   },
