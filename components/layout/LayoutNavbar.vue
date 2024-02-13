@@ -34,7 +34,7 @@ const navigation = [
   },
   {
     name: 'Discord',
-    href: 'https://discord.gg/S5WaWfFBd5',
+    href: 'https://octocon.app/discord',
     class: 'pl-3 pr-6'
   }
 ]

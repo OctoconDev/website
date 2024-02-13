@@ -18,7 +18,7 @@
         </div>
       </NuxtLink>
       <NuxtLink
-        to="https://discord.gg/S5WaWfFBd5"
+        to="https://octocon.app/discord"
         class="block p-0.5 rounded-lg bg-gradient-to-br from-gray-800 to-gray-900"
       >
         <div
