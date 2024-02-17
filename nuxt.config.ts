@@ -20,6 +20,19 @@ export default defineNuxtConfig({
       search: true
     }
   },
+  app: {
+    head: {
+      script: [
+        {
+          // <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "02047a1b340248b3937f03af8f0efdbf"}'></script><!-- End Cloudflare Web Analytics -->
+          defer: true,
+          src: 'https://static.cloudflareinsights.com/beacon.min.js',
+          'data-cf-beacon': '{"token": "02047a1b340248b3937f03af8f0efdbf"}',
+          tagPosition: 'bodyClose'
+        }
+      ]
+    }
+  },
   routeRules: {
     '/docs': {
       redirect: '/docs/introduction'
