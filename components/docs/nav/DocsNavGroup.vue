@@ -18,7 +18,7 @@
 <script setup lang="ts">
 import type { NavItem } from '@nuxt/content/dist/runtime/types'
 
-const props = defineProps<{
+defineProps<{
   data: NavItem
 }>()
 </script>

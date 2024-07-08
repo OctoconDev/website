@@ -1,8 +1,6 @@
 <template>
-  <div
-    class="bg-gray-950/50 border border-gray-500 px-8 py-8 rounded-xl max-w-2xl flex flex-col gap-8"
-  >
-    <p class="lg:text-lg text-gray-400 text-center">
+  <OctoCard>
+    <p class="lg:text-lg text-gray-300 text-center">
       Octocon is the modern, all-in-one toolkit for people with DID and OSDD to
       manage their disorder and express themselves.
     </p>
@@ -29,5 +27,6 @@
         </div>
       </NuxtLink>
     </div>
-  </div>
+  </OctoCard>
 </template>
+<script setup lang="ts"></script>

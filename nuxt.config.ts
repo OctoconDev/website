@@ -15,10 +15,7 @@ export default defineNuxtConfig({
   ],
   image: {},
   content: {
-    highlight: false,
-    experimental: {
-      search: true
-    }
+    highlight: false
   },
   app: {
     head: {
@@ -63,7 +60,17 @@ export default defineNuxtConfig({
         '/_ipx/f_webp&q_90&s_256x256/img/octocon-logo.png',
         '/_ipx/f_png&q_90&s_256x256/img/octocon-logo.png',
         '/_ipx/f_png&q_90&s_512x512/img/octocon-logo.png',
-        '/_ipx/f_avif&q_90&s_512x512/img/octocon-logo.png'
+        '/_ipx/f_avif&q_90&s_512x512/img/octocon-logo.png',
+
+        '/_ipx/w_256&f_webp&q_90/img/enable-samsung-internet.png',
+        '/_ipx/w_512&f_webp&q_90/img/enable-samsung-internet.png',
+        '/_ipx/w_256&f_avif&q_90/img/enable-samsung-internet.png',
+        '/_ipx/w_512&f_avif&q_90/img/enable-samsung-internet.png',
+
+        '/_ipx/w_256&f_webp&q_90/img/enable-firefox.png',
+        '/_ipx/w_512&f_webp&q_90/img/enable-firefox.png',
+        '/_ipx/w_256&f_avif&q_90/img/enable-firefox.png',
+        '/_ipx/w_512&f_avif&q_90/img/enable-firefox.png'
       ]
     }
   },
