@@ -40,7 +40,7 @@
       </h2>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
         <ButtonPlayStore />
-        <ButtonAppStore />
+        <!-- <ButtonAppStore /> -->
       </div>
     </div>
   </div>
