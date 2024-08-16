@@ -19,6 +19,29 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      link: [
+        {
+          rel: 'apple-touch-icon',
+          sizes: '180x180',
+          href: '/apple-touch-icon.png'
+        },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '16x16',
+          href: '/favicon-16x16.png'
+        },
+        {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '32x32',
+          href: '/favicon-32x32.png'
+        },
+        {
+          rel: 'manifest',
+          href: '/site.webmanifest'
+        }
+      ],
       script: [
         {
           // <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "02047a1b340248b3937f03af8f0efdbf"}'></script><!-- End Cloudflare Web Analytics -->
